@@ -4,6 +4,7 @@ import { UiComponent } from './ui.component';
 import { NaavComponent } from '../nav/naav.component';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -11,7 +12,8 @@ import { HeaderComponent } from '../header/header.component';
   declarations: [UiComponent, HeaderComponent, NaavComponent, FooterComponent],
   exports: [UiComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FontAwesomeModule
   ]
 })
 export class UiModule { }
