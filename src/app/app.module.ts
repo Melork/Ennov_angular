@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IconsModule } from './icons/icons.module';
 import { LayoutModule } from './layout/layout.module';
+import { LoginModule } from './login/login.module';
 import { UiModule } from './ui/ui.module';
 
 
@@ -19,7 +20,8 @@ import { UiModule } from './ui/ui.module';
     UiModule,
     NgbModule,
     LayoutModule,
-    IconsModule
+    IconsModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

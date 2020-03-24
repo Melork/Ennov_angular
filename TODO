@@ -2,8 +2,8 @@
 Todo:
   ✔ Test unitaires @done(20-03-23 17:14)
   ✔ Archi d'une app angular @done(20-03-23 17:14)
-  ☐ récap
-  ☐ transclusion ng content
+  ✔ récap @done(20-03-24 11:02)
+  ✔ transclusion ng content @done(20-03-24 11:02)
   ☐ life cycles
   ☐ modules de l'appli
   ☐ page de l'appli (agi et perf)

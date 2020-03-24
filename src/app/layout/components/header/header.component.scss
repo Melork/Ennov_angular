@@ -1,0 +1,12 @@
+@import 'theme';
+@import 'fonts';
+
+h1{
+  color: $color1;
+  font-size: $h2-fz;
+  text-align: center;
+}
+
+:host{ //permet de cibler l'élément "app-header"
+  width: 100%;
+}
