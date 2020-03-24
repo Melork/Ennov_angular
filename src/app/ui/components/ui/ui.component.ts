@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { UtilService } from 'src/app/core/services/util.service';
 
 @Component({
   selector: 'app-ui',
@@ -7,16 +7,12 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./ui.component.scss']
 })
 export class UiComponent implements OnInit {
-  public faBars = faBars;
-  public open: boolean;
-  constructor() { }
+  public utils = this.util;
+  constructor(private util : UtilService) {
+  }
 
   ngOnInit(): void {
-    this.open = true;
   }
 
-  toggle(){
-    this.open = !this.open;
-  }
 
 }
