@@ -10,6 +10,7 @@ import { Prestation } from 'src/app/shared/models/prestation';
 export class PageListPrestationsComponent implements OnInit {
 
   public collection: Prestation[];
+  public headers:String[];
   constructor(private ps: PrestationsService) { }
 
   ngOnInit(): void {
@@ -17,6 +18,15 @@ export class PageListPrestationsComponent implements OnInit {
       this.collection = datas;
       console.log(this.collection);
     });
+    this.headers=[
+      'Type',
+      'Client',
+      'Nb Jours',
+      'TjmHT',
+      'Total HT',
+      'Total TTC',
+      'State'
+  ]
   }
 
 }

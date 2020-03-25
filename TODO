@@ -4,6 +4,14 @@ Todo:
   ✔ Archi d'une app angular @done(20-03-23 17:14)
   ✔ récap @done(20-03-24 11:02)
   ✔ transclusion ng content @done(20-03-24 11:02)
-  ☐ life cycles
-  ☐ modules de l'appli
-  ☐ page de l'appli (agi et perf)
+  ✔ life cycles @done(20-03-24 17:04)
+  ✔ modules de l'appli @done(20-03-24 17:04)
+  ✔ page de l'appli (agi et perf) @done(20-03-24 17:04)
+  ✔ enum, inter, model @done(20-03-24 17:05)
+  ✔ api json serv @done(20-03-24 17:05)
+  ☐ service presta http observale
+  ☐ recap
+  ☐ pipe json, currency, localid, pipi perso
+  ☐ directives et directives perso
+  ☐ components stupides et dynamiques
+  ☐ appel de fonction dans html
