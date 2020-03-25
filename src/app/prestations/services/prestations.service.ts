@@ -37,7 +37,7 @@ export class PrestationsService {
   changeState(item: Prestation, state: State) {
     const newItem = new Prestation({...item});
     newItem.state=state;
-    return this.update(item);
+    return this.update(newItem);
 
   }
 

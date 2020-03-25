@@ -9,9 +9,9 @@ Todo:
   ✔ page de l'appli (agi et perf) @done(20-03-24 17:04)
   ✔ enum, inter, model @done(20-03-24 17:05)
   ✔ api json serv @done(20-03-24 17:05)
-  ☐ service presta http observale
-  ☐ recap
-  ☐ pipe json, currency, localid, pipi perso
+  ✔ service presta http observale @done(20-03-25 12:42)
+  ✔ recap @done(20-03-25 12:42)
+  ✔ pipe json, currency, localid, pipi perso @done(20-03-25 12:42)
   ☐ directives et directives perso
   ☐ components stupides et dynamiques
-  ☐ appel de fonction dans html
+  ✔ appel de fonction dans html (bonnes pratique) @done(20-03-25 12:42)
