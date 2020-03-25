@@ -1,28 +1,18 @@
-<!-- <p>{{collection | json}}</p> -->
-<div class="table-responsive">
-  <table class="table">
-    <caption>List of users</caption>
-    <thead>
-      <tr>
-        <th scope="col" *ngFor="let item of headers">{{item}}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of collection">
-        <td>{{item.typePresta}}</td>
-        <td>{{item.client}}</td>
-        <td>{{item.nbJours}}</td>
-        <td>{{item.tjmHt | currency: 'EUR'}}</td>
-        <td>{{item | total | currency: 'EUR'}}</td>
-        <td>{{item | total : 'ttc' | currency: 'EUR'}}</td>
-        <td [appState]="item.state">
-          <select (change)="changeState(item, $event)">
-            <!-- <option *ngFor="let state of states" [value]="state"> {{state}} </option>  ne fonctionne pas car ngFor ne fonctionne que sur tablea itérable, -->
-            <!-- <option *ngFor="let state of states | keyvalue" [value]="state.key"> {{state.value}} </option> -->
-            <option *ngFor="let state of states" [value]="state" [selected]="state === item.state" > {{state}} </option>
-          </select>
+<app-template-b [title]="titre" [subtitle]="soustitre">
+  <app-tableau-dark [headers]='headers'>
+    <tr *ngFor="let item of collection$ | async">
+      <td>{{item.typePresta}}</td>
+      <td>{{item.client}}</td>
+      <td>{{item.nbJours}}</td>
+      <td>{{item.tjmHt | currency: 'EUR'}}</td>
+      <td>{{item | total | currency: 'EUR'}}</td>
+      <td>{{item | total : 'ttc' | currency: 'EUR'}}</td>
+      <td [appState]="item.state">
+        <select (change)="changeState(item, $event)">
+          <!-- <option *ngFor="let state of states | keyvalue" [value]="state.key"> {{state.value}} </option> si on passe par un pipe keyvalue pour state-->
+          <option *ngFor="let state of states" [value]="state" [selected]="state === item.state"> {{state}} </option>
+        </select>
       </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+    </tr>
+  </app-tableau-dark>
+</app-template-b>
