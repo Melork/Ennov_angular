@@ -4,12 +4,14 @@ import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { State } from 'src/app/shared/enums/state-prestation.enum';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class PrestationsService {
+
   private pCollectiion: Observable<Prestation[]>;
   private urlApi = environment.urlApi
   constructor(private http: HttpClient) {
@@ -32,8 +34,17 @@ export class PrestationsService {
   }
 
   //update state
+  changeState(item: Prestation, state: State) {
+    const newItem = new Prestation({...item});
+    newItem.state=state;
+    return this.update(item);
+
+  }
 
   //updaten item
+  update(item: Prestation){
+    return this.http.patch<Prestation>(`${this.urlApi}prestations/${item.id}`, item);
+  }
 
   //add item
 
