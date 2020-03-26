@@ -3,6 +3,10 @@ import { PrestationsService } from '../../services/prestations.service';
 import { Prestation } from 'src/app/shared/models/prestation';
 import { State } from 'src/app/shared/enums/state-prestation.enum';
 import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { BtnRoute } from 'src/app/shared/interfaces/btn-route';
+import { BtnHref } from 'src/app/shared/interfaces/btn-href';
+import { BtnAction } from 'src/app/shared/interfaces/btn-action';
 
 @Component({
   selector: 'app-page-list-prestations',
@@ -15,11 +19,28 @@ export class PageListPrestationsComponent implements OnInit {
   public headers:string[];
   public titre: string;
   public soustitre: string;
-  // public states = State;
-  public states = Object.values(State); //
-  constructor(private ps: PrestationsService) { }
+  public states = Object.values(State); // recup valeur d'Enum State dans tableau
+  public btnAddPresta : BtnRoute;
+  public btnLinkGoogle : BtnHref;
+  public btnAction : BtnAction;
+
+  constructor(
+    private ps: PrestationsService,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.btnAddPresta = {
+      texte : 'Add presta',
+      route : 'add'
+    };
+    this.btnLinkGoogle = {
+      texte : 'Google',
+      href : 'https://www.google.fr'
+    };
+    this.btnAction = {
+      texte : 'Action',
+      action : true
+    };
     this.collection$ = this.ps.collection;
     this.headers=[
       'Type',
@@ -30,13 +51,20 @@ export class PageListPrestationsComponent implements OnInit {
       'Total TTC',
       'State'
     ];
-    this.titre='Prestations';
-    this.soustitre='Toutes les prestations';
+    this.route.data.subscribe((datas)=> {
+      this.titre=datas.title;
+      this.soustitre=datas.subtitle;
+    });
   }
   changeState(item : Prestation, e){
     this.ps.changeState(item, e.target.value).subscribe((res) => {
       item.state= res.state;
     });
+  }
+
+  public openPopup() {
+    console.log("Toto");
+
   }
 
 

@@ -12,6 +12,10 @@ Todo:
   ✔ service presta http observale @done(20-03-25 12:42)
   ✔ recap @done(20-03-25 12:42)
   ✔ pipe json, currency, localid, pipi perso @done(20-03-25 12:42)
-  ☐ directives et directives perso
-  ☐ components stupides et dynamiques
+  ✔ directives et directives perso @done(20-03-26 09:10)
+  ✔ components stupides et dynamiques @done(20-03-26 09:10)
   ✔ appel de fonction dans html (bonnes pratique) @done(20-03-25 12:42)
+  ☐ data dans router
+  ☐ components stupides ecapsulés avec styles selon templates
+  ☐ @Output() ex avec btn
+  ☐ formulaires
