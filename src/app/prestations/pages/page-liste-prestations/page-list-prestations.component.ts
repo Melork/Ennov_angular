@@ -19,7 +19,7 @@ export class PageListPrestationsComponent implements OnInit {
   public headers:string[];
   public titre: string;
   public soustitre: string;
-  public states = Object.values(State); // recup valeur d'Enum State dans tableau
+  public states = Object.values(State); // recup valeur d'Enum State dans tableau de string
   public btnAddPresta : BtnRoute;
   public btnLinkGoogle : BtnHref;
   public btnAction : BtnAction;

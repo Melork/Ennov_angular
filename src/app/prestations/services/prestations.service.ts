@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Prestation } from 'src/app/shared/models/prestation';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { map, retry, catchError } from 'rxjs/operators';
 import { State } from 'src/app/shared/enums/state-prestation.enum';
 
 
@@ -47,8 +47,27 @@ export class PrestationsService {
   }
 
   //add item
+  add(item : Prestation) {
+    return this.http.post<Prestation>(`${this.urlApi}prestations`, item).pipe(
+      retry(1),
+      catchError(this.handleError)
+    );
+  }
 
   //delete item
+
+  private handleError(error) {
+    let errorMessage = '';
+    if (error.error instanceof ErrorEvent) {
+        // client-side error
+        errorMessage = `Error: ${error.error.message}`;
+    } else {
+        // server-side error
+        errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    console.log(errorMessage);
+    return throwError(errorMessage);
+}
 
 
 }
