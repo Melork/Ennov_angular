@@ -6,6 +6,7 @@ import { FomePrestaComponent } from './components/fome-presta/fome-presta.compon
 import { PageAddPrestationComponent } from './pages/page-add-prestation/page-add-prestation.component';
 import { PageListPrestationsComponent } from './pages/page-liste-prestations/page-list-prestations.component';
 import { PrestationsRoutingModule } from './prestations-routing.module';
+import { IconsModule } from '../icons/icons.module';
 
 
 
@@ -15,7 +16,8 @@ import { PrestationsRoutingModule } from './prestations-routing.module';
     CommonModule,
     PrestationsRoutingModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IconsModule
   ]
 })
 export class PrestationsModule { }

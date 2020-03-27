@@ -1,1 +1,17 @@
-<p>page-liste-clients works!</p>
+<app-template-b [title]="titre" [subtitle]="soustitre">
+  <app-tableau-dark [headers]='headers'>
+    <tr *ngFor="let item of collection$ | async">
+      <td>{{item.name}}</td>
+      <td>{{item.email}}</td>
+      <td [appStateClient]="item.state">
+        <select (change)="changeState(item, $event)">
+          <!-- <option *ngFor="let state of states | keyvalue" [value]="state.key"> {{state.value}} </option> -->
+          <option *ngFor="let state of states" [value]="state" [selected]="state === item.state"> {{state}} </option>
+        </select>
+      </td>
+    </tr>
+  </app-tableau-dark>
+  <app-button [texte]="btnAddClient.texte" [route]='btnAddClient.route'></app-button>
+  <app-button [texte]="btnLinkGoogle.texte" [href]='btnLinkGoogle.href'></app-button>
+  <app-button [texte]="btnAction.texte" [action]='btnAction.action' (clicked)="openPopup()"></app-button>
+</app-template-b>

@@ -15,7 +15,13 @@ Todo:
   ✔ directives et directives perso @done(20-03-26 09:10)
   ✔ components stupides et dynamiques @done(20-03-26 09:10)
   ✔ appel de fonction dans html (bonnes pratique) @done(20-03-25 12:42)
-  ☐ data dans router
-  ☐ components stupides ecapsulés avec styles selon templates
-  ☐ @Output() ex avec btn
-  ☐ formulaires
+  ✔ data dans router @done(20-03-26 17:02)
+  ✔ components stupides ecapsulés avec styles selon templates @done(20-03-26 17:02)
+  ✔ @Output() ex avec btn @done(20-03-26 17:02)
+  ✔ formulaires @done(20-03-26 17:02)
+  ☐ edit prestation (route avec id dans url) operateur switchmap rxjs
+  ☐ example behaviorSubject => diff entre injection en pvt et public
+  ☐ ex route enfant avec sous navigation dans page list pres
+  ✔ delete presta @done(20-03-27 10:15)
+  ☐ eval formateur en ligne
+  ☐ parler du ponzi's scheme

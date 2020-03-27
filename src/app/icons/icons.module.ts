@@ -1,14 +1,15 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IconeNavComponent } from './components/icone-nav/icone-nav.component';
+import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { IconeDeleteComponent } from './components/icone-delete/icone-delete.component';
+import { IconeNavComponent } from './components/icone-nav/icone-nav.component';
 
 
 
 
 @NgModule({
-  declarations: [IconeNavComponent],
-  exports: [IconeNavComponent],
+  declarations: [IconeNavComponent, IconeDeleteComponent],
+  exports: [IconeNavComponent, IconeDeleteComponent],
   imports: [
     CommonModule,
     FontAwesomeModule

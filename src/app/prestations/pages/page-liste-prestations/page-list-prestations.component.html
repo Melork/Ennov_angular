@@ -13,6 +13,7 @@
           <option *ngFor="let state of states" [value]="state" [selected]="state === item.state"> {{state}} </option>
         </select>
       </td>
+      <td><app-icone-delete (click)="deletePresta(item)"></app-icone-delete></td>
     </tr>
   </app-tableau-dark>
   <app-button [texte]="btnAddPresta.texte" [route]='btnAddPresta.route'></app-button>

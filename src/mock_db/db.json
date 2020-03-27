@@ -16,49 +16,22 @@
       "tjmHt": 1200,
       "nbJours": 1,
       "tva": 20,
-      "state": "Confirmé",
+      "state": "Annulé",
       "comment": "merci tonton",
-      "id": 3
+      "id": 3,
+      "name": "Christophe",
+      "email": "christophe@gmail.com",
+      "image": "../../../../assets/img/chris.JPG"
     },
     {
-      "typePresta": "aze",
-      "client": "aez",
-      "tjmHt": 1200,
-      "nbJours": 1,
-      "tva": 20,
-      "state": "Option",
-      "comment": "aeze",
-      "id": 4
-    },
-    {
-      "typePresta": "aze",
-      "client": "eeeee",
-      "tjmHt": 1200,
-      "nbJours": 1,
-      "tva": 20,
-      "state": "Option",
-      "comment": "aze",
-      "id": 5
-    },
-    {
-      "typePresta": "sqd",
-      "client": "dsd",
+      "typePresta": "swdxfcg",
+      "client": "sdfgh",
       "tjmHt": 1200,
       "nbJours": 1,
       "tva": 20,
       "state": "Option",
       "comment": null,
-      "id": 6
-    },
-    {
-      "typePresta": "cxxc",
-      "client": "cx",
-      "tjmHt": 1200,
-      "nbJours": 15,
-      "tva": 20,
-      "state": "Option",
-      "comment": "nb",
-      "id": 7
+      "id": 5
     }
   ],
   "clients": [
@@ -74,7 +47,31 @@
       "name": "Chris",
       "email": "chris@gmail.com",
       "image": "../../../../assets/img/christ.JPG",
-      "state": "Actif"
+      "state": "Inactif"
+    },
+    {
+      "name": "azeze",
+      "email": "aaa",
+      "state": "Actif",
+      "id": 6
+    },
+    {
+      "name": "aa",
+      "email": "jklm",
+      "state": "Inactif",
+      "id": 7
+    },
+    {
+      "name": "aze",
+      "email": "aze@a",
+      "state": "Inactif",
+      "id": 8
+    },
+    {
+      "name": "gfd",
+      "email": "aze@ty",
+      "state": "Actif",
+      "id": 9
     }
   ]
 }
