@@ -1,16 +1,22 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UtilService {
   public open: boolean;
+  public version$: BehaviorSubject<number> = new BehaviorSubject(null);
 
   constructor() {
-    this.open=true;
+    this.open = true;
   }
 
-  toggle(){
+  toggle() {
     this.open = !this.open;
+  }
+
+  public incrementVersion() {
+    this.version$.next(this.version$.value + 1)
   }
 }

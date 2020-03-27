@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilService } from 'src/app/core/services/util.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  public version$: BehaviorSubject<number>;
+
+
+  constructor(private u: UtilService) { }
 
   ngOnInit(): void {
+    this.version$=this.u.version$;
   }
 
 }

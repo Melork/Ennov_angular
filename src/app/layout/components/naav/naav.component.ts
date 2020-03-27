@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilService } from 'src/app/core/services/util.service';
 
 @Component({
   selector: 'app-naav',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NaavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private u: UtilService) { }
 
   ngOnInit(): void {
+  }
+
+  public increment() {
+    this.u.incrementVersion();
   }
 
 }
