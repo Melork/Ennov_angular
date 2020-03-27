@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { State } from 'src/app/shared/enums/state-prestation.enum';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Prestation } from 'src/app/shared/models/prestation';
@@ -13,7 +13,7 @@ export class FomePrestaComponent implements OnInit {
   @Output() private nItem: EventEmitter<Prestation> = new EventEmitter;
   public states = Object.values(State); //tableau de string de State
   public form: FormGroup;
-  private item = new Prestation();
+  @Input() private item = new Prestation();
   constructor(
     private fb: FormBuilder
   ) { }
@@ -26,7 +26,8 @@ export class FomePrestaComponent implements OnInit {
       nbJours: [this.item.nbJours],
       tva: [this.item.tva],
       state: [this.item.state],
-      comment: [this.item.comment]
+      comment: [this.item.comment],
+      id: [this.item.id]
     })
   }
 

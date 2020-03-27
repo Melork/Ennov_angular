@@ -78,4 +78,8 @@ export class PageListPrestationsComponent implements OnInit {
       });
     });
   }
+
+  public edit(item: Prestation) {
+    this.router.navigate(['prestations','edit',item.id])
+  }
 }

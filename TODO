@@ -19,7 +19,7 @@ Todo:
   ✔ components stupides ecapsulés avec styles selon templates @done(20-03-26 17:02)
   ✔ @Output() ex avec btn @done(20-03-26 17:02)
   ✔ formulaires @done(20-03-26 17:02)
-  ☐ edit prestation (route avec id dans url) operateur switchmap rxjs
+  ✔ edit prestation (route avec id dans url) operateur switchmap rxjs @done(20-03-27 12:16)
   ☐ example behaviorSubject => diff entre injection en pvt et public
   ☐ ex route enfant avec sous navigation dans page list pres
   ✔ delete presta @done(20-03-27 10:15)

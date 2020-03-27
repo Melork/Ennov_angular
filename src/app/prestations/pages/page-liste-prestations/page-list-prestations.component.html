@@ -1,6 +1,6 @@
 <app-template-b [title]="titre" [subtitle]="soustitre">
   <app-tableau-dark [headers]='headers'>
-    <tr *ngFor="let item of collection$ | async">
+    <tr *ngFor="let item of collection$ | async" (click)="edit(item)">
       <td>{{item.typePresta}}</td>
       <td>{{item.client}}</td>
       <td>{{item.nbJours}}</td>
@@ -8,12 +8,12 @@
       <td>{{item | total | currency: 'EUR'}}</td>
       <td>{{item | total : 'ttc' | currency: 'EUR'}}</td>
       <td [appState]="item.state">
-        <select (change)="changeState(item, $event)">
+        <select (change)="changeState(item, $event)" (click)='$event.stopPropagation()'>
           <!-- <option *ngFor="let state of states | keyvalue" [value]="state.key"> {{state.value}} </option> si on passe par un pipe keyvalue pour state-->
           <option *ngFor="let state of states" [value]="state" [selected]="state === item.state"> {{state}} </option>
         </select>
       </td>
-      <td><app-icone-delete (click)="deletePresta(item)"></app-icone-delete></td>
+      <td><app-icone-delete (click)="$event.stopPropagation(); deletePresta(item)"></app-icone-delete></td>
     </tr>
   </app-tableau-dark>
   <app-button [texte]="btnAddPresta.texte" [route]='btnAddPresta.route'></app-button>

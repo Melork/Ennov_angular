@@ -7,11 +7,12 @@ import { PageAddPrestationComponent } from './pages/page-add-prestation/page-add
 import { PageListPrestationsComponent } from './pages/page-liste-prestations/page-list-prestations.component';
 import { PrestationsRoutingModule } from './prestations-routing.module';
 import { IconsModule } from '../icons/icons.module';
+import { PageEditPrestationComponent } from './pages/page-edit-prestation/page-edit-prestation.component';
 
 
 
 @NgModule({
-  declarations: [PageListPrestationsComponent, PageAddPrestationComponent, FomePrestaComponent],
+  declarations: [PageListPrestationsComponent, PageAddPrestationComponent, FomePrestaComponent, PageEditPrestationComponent],
   imports: [
     CommonModule,
     PrestationsRoutingModule,

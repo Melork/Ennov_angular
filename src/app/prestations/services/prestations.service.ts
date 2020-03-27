@@ -62,6 +62,10 @@ export class PrestationsService {
     );
   }
 
+  //get item
+  getItemById(id : string) : Observable<Prestation>{
+    return this.http.get<Prestation>(`${this.urlApi}prestations/${id}`);
+  }
   private handleError(error) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {

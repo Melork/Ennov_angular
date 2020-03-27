@@ -1,0 +1,5 @@
+<app-template-b [title]="titre" [subtitle]="soustitre">
+  <div class="container">
+    <app-fome-presta *ngIf="item$ | async as item" (nItem)='edit($event)' [item]='item'></app-fome-presta>
+  </div>
+</app-template-b>
